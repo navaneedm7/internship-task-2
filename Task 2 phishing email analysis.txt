@@ -1,0 +1,113 @@
+                                         Task 2 phishing email analysis 
+
+
+
+1.Overview
+
+   This report analyzes a suspicious URL submitted to VirusTotal for threat intelligence verification. The URL was evaluated by multiple security vendors to determine its malicious nature.
+
+
+2.Analysed URL
+
+   https://wallet-metamaskchd.usvcrcle.app/
+
+
+3.Scan summary 
+
+   
+                               Metric	                        Result
+                         Detection Ratio	            18 / 94 Vendors
+                         Community Score	                -18
+                          MHTTP Status	                   200(active)
+                          Content type	                   Text/html
+
+
+Interpretation:
+
+18 security vendors flagged the URL as malicious
+Negative community score indicates high suspicion
+HTTP 200 confirms the site is live and accessible
+
+
+4.Security Vendor Detections
+
+The following vendors identified the URL as malicious or phishing:
+
+ADMINUSLabs – Malicious
+alphaMountain.ai – Malicious
+BitDefender – Phishing
+Kaspersky – Phishing
+G-Data – Phishing
+Forcepoint ThreatSeeker – Phishing
+Emsisoft – Phishing
+Fortinet – Phishing
+Gridinsoft – Phishing
+Lionic – Phishing
+Criminal IP – Phishing
+ChainGuard – Malicious
+
+
+
+5.Threat Classification
+
+Most vendors classified the URL as:
+
+Phishing
+Credential Harvesting
+Malicious Website
+
+
+
+6.Technical Indicators of Compromise (IOCs)
+
+                Indicator Type	            value
+                    URL	 - wallet-metamaskchd.usvcrcle.app
+                 Protocol	-         HTTPS
+                HTTP Status	-          200
+                Detection	-       18/94 vendors
+
+
+
+
+7.Analysis of Domain Characteristics
+
+ Suspicious Elements:
+
+"metamaskchd" → likely impersonating MetaMask
+"usvcrcle.app" → suspicious domain (possibly typo of “usvcircle” or random)
+Domain structure suggests subdomain abuse
+Designed to mimic cryptocurrency wallet service
+
+This strongly indicates: Cryptocurrency phishing campaign Possible wallet seed phrase harvesting attempt
+
+
+
+8.Risk Assessment
+
+Risk Level: 🔴 HIGH
+
+Reasoning:
+Multiple vendor detections
+Active website (HTTP 200)
+Cryptocurrency impersonation
+Phishing classification across major AV vendors
+
+
+
+9.MITRE ATT&CK Mapping
+T1566.002 – Phishing: Spearphishing Link
+T1583.001 – Acquire Infrastructure: Domains
+T1204 – User Execution
+
+
+
+10.Conclusion
+
+The analyzed URL is confirmed to be a malicious phishing website, likely designed to impersonate MetaMask services to steal cryptocurrency wallet credentials or seed phrases.
+
+Users should avoid interacting with the URL. Blocking at DNS, firewall, and email gateway level is recommended.
+
+
+
+
+
